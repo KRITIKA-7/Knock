@@ -1,0 +1,38 @@
+{
+  "slug": "voltcore",
+  "name": "VoltCore",
+  "one_liner": "Deterministic battery management firmware for high-voltage industrial EV packs.",
+  "domain": "Embedded BMS & Real-Time Firmware",
+  "tech_stack": [
+    "C",
+    "C++",
+    "FreeRTOS",
+    "CAN-FD",
+    "SPI",
+    "DMA"
+  ],
+  "hard_problems": [
+    {
+      "id": "vc-can-arbitration",
+      "title": "Deterministic CAN-FD frame scheduling under fault bursts",
+      "description": "Sixteen daisy-chained battery modules flood the CAN-FD bus during cell over-voltage events, causing priority inversion and missed 250us watchdog deadlines."
+    },
+    {
+      "id": "vc-dma-ringbuffer",
+      "title": "Zero-copy ADC DMA acquisition in 256KB SRAM",
+      "description": "Sampling 16 cell channels at 100kHz via SPI ADC and DMA without dynamic heap allocation risks silent ring-buffer overruns when contactor state interrupts preempt."
+    },
+    {
+      "id": "vc-flash-wear",
+      "title": "Power-fail-safe NOR flash fault logging",
+      "description": "Black-box diagnostics must persist cycle counters and thermal fault snapshots across unexpected brownouts without corrupting erase blocks or exceeding flash endurance."
+    }
+  ],
+  "founder": {
+    "name": "Morgan Mockman",
+    "role": "Founder & Principal Firmware Architect",
+    "email": "morgan.voltcore@example.com",
+    "x_handle": "@morgan_voltcore_fake",
+    "linkedin": "https://linkedin.com/in/morgan-voltcore-fake"
+  }
+}

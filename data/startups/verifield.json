@@ -1,0 +1,37 @@
+{
+  "slug": "verifield",
+  "name": "VeriField",
+  "one_liner": "On-device vision diagnostics for low-connectivity agricultural clinics.",
+  "domain": "Edge Computer Vision & Applied ML",
+  "tech_stack": [
+    "PyTorch",
+    "ONNX Runtime",
+    "OpenCV",
+    "FastAPI",
+    "React"
+  ],
+  "hard_problems": [
+    {
+      "id": "vf-domain-drift",
+      "title": "Field lighting and camera sensor drift",
+      "description": "Models validated on clean benchmark photos suffer a 22% accuracy drop under harsh midday glare, lens dust, and non-target background objects in rural clinics."
+    },
+    {
+      "id": "vf-mobile-latency",
+      "title": "Inference latency on budget Android hardware",
+      "description": "Target devices have 3GB RAM and no cloud fallback; end-to-end preprocessing, classification, and confidence gating must finish under 60ms without thermal throttling."
+    },
+    {
+      "id": "vf-calibration-cost",
+      "title": "Human review cost from overconfident false positives",
+      "description": "Uncalibrated softmax scores route too many blurry or out-of-distribution images to paid agronomist review, blowing past the $0.02/scan margin budget."
+    }
+  ],
+  "founder": {
+    "name": "Priya Fakename",
+    "role": "Founder & CEO",
+    "email": "priya.verifield@example.com",
+    "x_handle": "@priya_fakename",
+    "linkedin": "https://linkedin.com/in/priya-fakename-fake"
+  }
+}

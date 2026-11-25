@@ -1,0 +1,38 @@
+{
+  "slug": "tensorforge",
+  "name": "TensorForge",
+  "one_liner": "Multi-tenant GPU cluster scheduling and prefix-cached LLM serving platform.",
+  "domain": "Distributed ML Training & Serving Infrastructure",
+  "tech_stack": [
+    "Python",
+    "CUDA",
+    "Kubernetes",
+    "gRPC",
+    "Triton",
+    "Rust"
+  ],
+  "hard_problems": [
+    {
+      "id": "tf-kv-cache-eviction",
+      "title": "Paged KV-cache fragmentation under variable prompt lengths",
+      "description": "High-concurrency serving clusters with mixed 2k and 64k context requests hit HBM exhaustion and prefix-tree thrashing before compute utilization reaches 60%."
+    },
+    {
+      "id": "tf-spot-checkpointing",
+      "title": "Zero-stall asynchronous checkpointing on spot GPU clusters",
+      "description": "Preemptible multi-node training jobs lose 18% of cluster hours waiting on synchronous all-reduce barriers and host-to-object-store weight flushes."
+    },
+    {
+      "id": "tf-lora-batching",
+      "title": "Continuous batching SLO isolation across heterogeneous LoRA adapters",
+      "description": "Co-locating bursty long-generation adapters with latency-sensitive interactive tenants starves time-to-first-token p99 budgets under shared scheduler queues."
+    }
+  ],
+  "founder": {
+    "name": "Devon Testworth",
+    "role": "Co-founder & CTO",
+    "email": "devon.tensorforge@example.com",
+    "x_handle": "@devon_tensorforge_fake",
+    "linkedin": "https://linkedin.com/in/devon-tensorforge-fake"
+  }
+}

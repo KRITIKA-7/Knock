@@ -1,0 +1,1 @@
+knn cosine -0.4585 fail on glare blur because wash out deep feature emb so blur pic cluster near centroid or look close to soil (-0.594 only 92% reject). msp already bad 21.3% reject vs 98% knn. if just tighten cutoff -> lose 95% recall. better put fast cv2 laplacian blur check first ask nurse retake free, only rest go knn gate, cut $0.02 cost.

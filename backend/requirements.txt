@@ -5,4 +5,6 @@ pydantic-settings
 python-dotenv
 pdfplumber
 python-multipart
-anthropic
+google-genai
+sqlalchemy
+httpx

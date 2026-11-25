@@ -23,7 +23,7 @@ pip install -r backend/requirements.txt
 cp .env.example .env
 ```
 
-Set your `ANTHROPIC_API_KEY` and `ANTHROPIC_MODEL` in `.env`.
+Set your `GEMINI_API_KEY` and `GEMINI_MODEL` in `.env`.
 
 ### 4. Run the development server
 

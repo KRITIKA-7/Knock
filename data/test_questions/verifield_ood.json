@@ -1,0 +1,16 @@
+{
+  "id": "q1",
+  "text": "In KukuGuard, you selected Deep Feature Cosine Distance (KNN-OOD) with threshold -0.4585 (0.9966 AUROC, 98% OOD rejection) after comparing it against Free Energy Scoring (0.840 AUROC, 23% OOD rejection) and Max Softmax Probability (0.827 AUROC, 21.3% OOD rejection) in reports/phase7_ood_benchmark.json. At VeriField, blurry or out-of-distribution rural clinic scans currently route too many false positives to paid agronomist review, breaking our $0.02/scan margin. Where does a fixed cosine threshold of -0.4585 fail under camera glare and motion blur, and what would you change in the gating pipeline to protect our review budget without dropping true positive recall?",
+  "project_name": "KukuGuard",
+  "grounded_in": [
+    {
+      "kind": "fetched_file",
+      "detail": "reports/phase7_ood_benchmark.json: Deep Feature Cosine Distance (KNN-OOD)",
+      "independent": true
+    }
+  ],
+  "startup_problem_id": "vf-calibration-cost",
+  "time_limit_minutes": 15,
+  "context_chars": 980,
+  "context_preview": "{\"primary_detector\": {\"method\": \"Deep Feature Cosine Distance (KNN-OOD)\", \"metric\": \"cosine\", \"threshold\": -0.45850321650505066, \"val_tpr\": 0.95, \"test_tpr\": 0.9627791563275434, \"ood_rejection_rate\": 0.98, \"auroc\": 0.9966004962779157}, \"energy_score_baseline\": {\"method\": \"Free Energy Score (calibrated T=1.63)\", \"ood_rejection_rate\": 0.23, \"auroc\": 0.8405}, \"max_softmax\": {\"ood_rejection_rate\": 0.2133, \"auroc\": 0.8279}, \"category_breakdown\": {\"clean_soils\": {\"rejection_rate\": 0.92, \"mean_score\": -0.594}}}"
+}

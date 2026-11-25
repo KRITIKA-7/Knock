@@ -14,3 +14,7 @@ __pycache__/
 .pytest_cache/
 
 CLAUDE.md
+*.db
+*.sqlite
+*.sqlite3
+samples/.cache/

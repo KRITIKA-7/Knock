@@ -1,0 +1,38 @@
+{
+  "slug": "hyperbase",
+  "name": "Hyperbase",
+  "one_liner": "Offline-first SQLite sync engine for edge web and mobile apps.",
+  "domain": "Local-First Sync & Developer Infrastructure",
+  "tech_stack": [
+    "Python",
+    "FastAPI",
+    "TypeScript",
+    "React Native",
+    "SQLite",
+    "WebSockets"
+  ],
+  "hard_problems": [
+    {
+      "id": "hb-offline-merge",
+      "title": "High-latency offline client reconciliation",
+      "description": "Mobile field clients stay offline for 6-18 hours on 2G/3G networks and reconnect with hundreds of queued local SQLite mutations that conflict on shared records."
+    },
+    {
+      "id": "hb-sqlite-write-lock",
+      "title": "SQLite write contention under burst traffic",
+      "description": "Single-writer SQLite locks spike p99 sync acknowledgement latency above 400ms whenever 300+ concurrent clients flush batches to the FastAPI ingest node."
+    },
+    {
+      "id": "hb-payload-cost",
+      "title": "Bandwidth and egress cost on flaky connections",
+      "description": "Re-sending full state snapshots after mid-stream WebSocket disconnects triples mobile data usage and cloud egress bills."
+    }
+  ],
+  "founder": {
+    "name": "Alex Exampleton",
+    "role": "Co-founder & CTO",
+    "email": "alex.hyperbase@example.com",
+    "x_handle": "@alex_exampleton",
+    "linkedin": "https://linkedin.com/in/alex-exampleton-fake"
+  }
+}

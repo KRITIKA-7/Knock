@@ -1,0 +1,38 @@
+{
+  "slug": "ledgernest",
+  "name": "LedgerNest",
+  "one_liner": "Automated recurring billing, usage metering, and revenue reporting for SaaS finance teams.",
+  "domain": "B2B SaaS Billing & Subscription Analytics",
+  "tech_stack": [
+    "TypeScript",
+    "React",
+    "Node.js",
+    "PostgreSQL",
+    "Redis",
+    "Docker"
+  ],
+  "hard_problems": [
+    {
+      "id": "ln-idempotent-webhooks",
+      "title": "Out-of-order Stripe webhook state reconciliation",
+      "description": "Payment gateway webhook deliveries arrive out of sequence and duplicate retries race against checkout callbacks, risking double-invoicing or stale subscription entitlements."
+    },
+    {
+      "id": "ln-proration-ledger",
+      "title": "Multi-currency mid-cycle proration without rounding drift",
+      "description": "Upgrades across tiered seat plans and zero-decimal currencies accumulate sub-cent invoice discrepancies against append-only double-entry accounting exports."
+    },
+    {
+      "id": "ln-tenant-cohort-p95",
+      "title": "Sub-300ms MRR cohort queries over 2M+ invoice lines",
+      "description": "Tenant finance dashboards run arbitrary slice-and-dice retention queries that trigger sequential scans and lock contention during end-of-month close."
+    }
+  ],
+  "founder": {
+    "name": "Casey Sampleston",
+    "role": "Co-founder & CEO",
+    "email": "casey.ledgernest@example.com",
+    "x_handle": "@casey_ledgernest_fake",
+    "linkedin": "https://linkedin.com/in/casey-ledgernest-fake"
+  }
+}

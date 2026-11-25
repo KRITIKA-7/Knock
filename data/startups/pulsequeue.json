@@ -1,0 +1,33 @@
+{
+  "slug": "pulsequeue",
+  "name": "PulseQueue",
+  "one_liner": "Multi-tenant workflow and approval automation for SMB operations teams.",
+  "domain": "B2B Workflow & Distributed Backend Systems",
+  "tech_stack": [
+    "PHP",
+    "Laravel",
+    "MySQL",
+    "Node.js",
+    "React",
+    "Docker"
+  ],
+  "hard_problems": [
+    {
+      "id": "pq-noisy-neighbor",
+      "title": "Queue starvation from noisy-neighbor tenants",
+      "description": "When one large tenant triggers 40,000 bulk approval notifications at month-end, interactive login and password-reset emails for other tenants stall past the 5-second SLA."
+    },
+    {
+      "id": "pq-audit-iops",
+      "title": "Immutable RBAC and audit log storage cost",
+      "description": "Compliance customers require tamper-evident per-action audit trails across role-scoped approvals, which currently accounts for 65% of MySQL write IOPS and slows dashboard queries."
+    }
+  ],
+  "founder": {
+    "name": "Jordan Placeholder",
+    "role": "Co-founder & Engineering Lead",
+    "email": "jordan.pulsequeue@example.com",
+    "x_handle": "@jordan_placeholder",
+    "linkedin": "https://linkedin.com/in/jordan-placeholder-fake"
+  }
+}
